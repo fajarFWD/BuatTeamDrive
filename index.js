@@ -108,7 +108,7 @@ Beberapa permintaan API di backend, prosesnya memakan waktu lama, harap bersabar
                         class="form-check-label"
                         for="teamDriveThemeOptionRandom"
                       >
-                        随机
+                       Random
                       </label>
                     </div>
                   </div>
@@ -133,12 +133,11 @@ Beberapa permintaan API di backend, prosesnya memakan waktu lama, harap bersabar
           <div class="modal-body text-center">
             <div class="d-flex justify-content-center">
               <div class="spinner-border" role="status">
-                <span class="sr-only">正在创建中...</span>
+                <span class="sr-only">Membuat...</span>
               </div>
             </div>
             <div clas="loader-txt">
-              <p>正在创建中...</p>
-            </div>
+              <p>Membuat...>
           </div>
         </div>
       </div>
@@ -229,11 +228,11 @@ Beberapa permintaan API di backend, prosesnya memakan waktu lama, harap bersabar
           }),
           success: function(data) {
             $("#loadMe").modal("hide");
-            alert("成功!");
+            alert("Sukses!");
           },
           error: function(request, status, error) {
             $("#loadMe").modal("hide");
-            alert("失败!" + request.responseText);
+            alert("Yah gagal...!" + request.responseText);
           },
           contentType: "application/json"
         });
@@ -294,7 +293,7 @@ async function handleRequest(request) {
 
         if (authConfig.dailyLimit) {
           if (dailyLimit.includes(requestBody.emailAddress)) {
-            return new Response("每天只允许提交一次", {
+            return new Response("Kirimkan hanya sekali sehari", {
               status: 429
             });
           } else {
