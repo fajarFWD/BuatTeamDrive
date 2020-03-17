@@ -21,7 +21,7 @@ var html = `
       name="viewport"
       content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"
     />
-    <title>Google TeamDrive</title>
+    <title>Google TeamDrive Creator</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -53,8 +53,8 @@ var html = `
              : ""
          }
             <p>             
-Beberapa permintaan API di backend, prosesnya memakan waktu lama, harap bersabar,
-              <span style="color: red"><b>Jangan pernah kirim lagi</b></span>
+Proses permintaan API di backend dan mungkin memakan waktu lebih lama, harap bersabar.
+              <span style="color: red"><b>1 TD per E-mail</b></span>
             </p>
             <br />
             <div class="info-form text-left">
@@ -133,11 +133,11 @@ Beberapa permintaan API di backend, prosesnya memakan waktu lama, harap bersabar
           <div class="modal-body text-center">
             <div class="d-flex justify-content-center">
               <div class="spinner-border" role="status">
-                <span class="sr-only">Membuat...</span>
+                <span class="sr-only">Membuat TeamDrive...</span>
               </div>
             </div>
             <div clas="loader-txt">
-              <p>Membuat...>
+              <p>Membuat TeamDrive...</p>
           </div>
         </div>
       </div>
@@ -228,11 +228,11 @@ Beberapa permintaan API di backend, prosesnya memakan waktu lama, harap bersabar
           }),
           success: function(data) {
             $("#loadMe").modal("hide");
-            alert("Sukses!");
+            alert("Yes berhasil membuat TeamDrive!");
           },
           error: function(request, status, error) {
             $("#loadMe").modal("hide");
-            alert("Yah gagal...!" + request.responseText);
+            alert("Yah gagal!" + request.responseText);
           },
           contentType: "application/json"
         });
